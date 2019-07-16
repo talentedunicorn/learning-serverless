@@ -1,0 +1,15 @@
+service: learning-serverless
+#app: your-app-name
+#tenant: your-tenant-name
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+         path: hello
+         method: get
